@@ -208,7 +208,7 @@ query.queryChaincode("peer2", "mychannel", "mycc", [""], "getAllParts", "Jim", "
     
                         // });
     
-                        helper.getRegisteredUsers("Jim1", "org3", true).then(function(response) {
+                        helper.getRegisteredUsers("Jim1", "org2", true).then(function(response) {
                             console.log(response);
                         });
 
@@ -221,10 +221,31 @@ query.queryChaincode("peer2", "mychannel", "mycc", [""], "getAllParts", "Jim", "
                         // .then(function(message) {
                         //     console.log(message);
                         // });
-                        query.queryChaincode("peer1", "ikeachannel", "ikeaCC", ["a"], "query", "Jim1", "org4")
+
+
+                        //////////////////////////////////testing////////////////////////////////
+                        query.queryChaincode("peer1", "farmerschannel", "farmersCC", ["a"], "getAllParts", "Jim1", "org1")
                         .then(function(message) {
                             console.log(message);
                         });
+                        // query.queryChaincode("peer1", "farmerschannel", "farmersCC", ["a"], "getAllParts", "admin", "org2")
+                        // .then(function(message) {
+                        //     console.log(message);
+                        // });
+                        // query.queryChaincode("peer1", "farmerschannel", "farmersCC", ["a"], "getAllParts", "admin", "org3")
+                        // .then(function(message) {
+                        //     console.log(message);
+                        // });
+                        // query.queryChaincode("peer1", "farmerschannel", "farmersCC", ["a"], "getAllParts", "admin", "org4")
+                        // .then(function(message) {
+                        //     console.log(message);
+                        // });
+
+
+                        // query.queryChaincode("peer1", "ikeachannel", "ikeaCC", ["a"], "query", "Jim1", "org4")
+                        // .then(function(message) {
+                        //     console.log(message);
+                        // });
     
     //                 });
     //             }, 10000);
